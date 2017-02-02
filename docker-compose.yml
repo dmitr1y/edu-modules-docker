@@ -1,11 +1,6 @@
 version: "2"
 
 services:
-  strassen:
-    build: ./strassen/
-    environment:
-                - VIRTUAL_HOST=strassen.eltech.localhost
-
   eltech:
     build: ./eltech/
     environment:
