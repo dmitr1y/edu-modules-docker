@@ -1,0 +1,11 @@
+## main site
+## container name: main
+server {
+        #server_name students.ipo.spb.ru;
+        server_name localhost;
+        listen 80 ;
+        access_log /var/log/nginx/access.log;
+        location / {
+                proxy_pass http://main;
+        }
+}
