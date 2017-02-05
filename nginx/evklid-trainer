@@ -1,8 +1,8 @@
 ## NodeJS service evklid-trainer
 ## container name: evklid-trainer
 server {
-        #server_name evklid.students.ipo.spb.ru;
-        server_name evklid.localhost;
+        server_name evklid.students.ipo.spb.ru;
+        #server_name evklid.localhost;
         listen 80 ;
         access_log /var/log/nginx/access.log;
         location / {

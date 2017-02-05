@@ -12,21 +12,21 @@ services:
     restart: always
 
   nginx-proxy:
-    image: jwilder/nginx-proxy
-    container_name: nginx-proxy
+    build: ./nginx/
+    container_name: nginx
     ports:
       - "80:80"
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     restart: always
 
-  MongoDB:
-    image: mongo
-    ports:
-      - "27017:27017"
-    volumes:
-      - /data/db/:/var/lib/mongodb
-    restart: always
+  mongodb:
+   image: mongo
+   container_name: mongodb
+   ports:
+    - 27017:27017
+   volumes:
+   - /data/db:/data/db
 
 networks:  
   default:

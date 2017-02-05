@@ -10,7 +10,7 @@ server {
 	server_name _;
 
 	location / {
-		#proxy_pass http://10.146.2.7:8888/;
-		proxy_pass http://localhost:8080/;
+		proxy_pass http://10.146.2.7:8888/;
+		#proxy_pass http://localhost:8080/;
 	}
 }
