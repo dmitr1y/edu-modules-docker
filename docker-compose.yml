@@ -3,8 +3,30 @@ version: "2"
 services:
   eltech:
     build: ./eltech/
-    environment:
-                - VIRTUAL_HOST=students.ipo.spb.ru
+    container_name: main
+    restart: always
+
+  evklid-trainer:
+    build: ./evklid-trainer/
+    container_name: evklid
+    restart: always
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    restart: always
+
+  MongoDB:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - /data/db/:/var/lib/mongodb
+    restart: always
 
 networks:  
   default:
