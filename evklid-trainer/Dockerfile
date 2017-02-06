@@ -11,6 +11,8 @@ RUN git clone https://github.com/dmitr1y/discrete-eltech.git /usr/discrete-eltec
 
 RUN rm /usr/discrete-eltech/db.js
 ADD db.js /usr/discrete-eltech/
+RUN rm /usr/discrete-eltech/index.js
+ADD index.js /usr/discrete-eltech/
 
 WORKDIR /usr/discrete-eltech
 
