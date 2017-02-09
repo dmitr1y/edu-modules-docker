@@ -26,10 +26,10 @@ services:
    ports:
     - 27017:27017
    volumes:
-   - /data/db:/data/db
+   - /srv/mongo/evklid-trainer:/data/db
    restart: always
 
-networks:  
+networks:
   default:
     external:
       name: nginx-proxy
