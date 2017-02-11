@@ -6,28 +6,29 @@ services:
     container_name: shell
     restart: always
     volumes:
-          - /srv/docker/edu-modules:/www:ro
-          - /srv/docker/offline-modules:/www/modules:ro
+          - /srv/docker/edu-modules:/www
+          - /srv/docker/offline-modules:/www/modules
 
   evklid-trainer:
     build: ./evklid-trainer/
     container_name: evklid
     restart: always
     volumes:
-              - /srv/docker/online-modules/evklid-trainer:/usr/discrete-eltech:ro
+          - /srv/docker/online-modules/evklid-trainer:/usr/discrete-eltech
+          - /srv/docker/docker-secret/evklid-trainer/access.js:/usr/discrete-eltech/access.js:ro
 
   atp-system:
       build: ./atp-system/
       container_name: atp-system
       restart: always
       volumes:
-                    - /srv/docker/online-modules/atp-system:/usr/atp-system:ro
+          - /srv/docker/online-modules/atp-system:/usr/atp-system
 
   nginx-proxy:
     build: ./nginx/
     container_name: nginx
     ports:
-      - "80:80"
+      - 80:80
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     restart: always
