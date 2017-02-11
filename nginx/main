@@ -6,6 +6,6 @@ server {
         listen 80 ;
         access_log /var/log/nginx/access.log;
         location / {
-                proxy_pass http://main;
+                proxy_pass http://shell;
         }
 }

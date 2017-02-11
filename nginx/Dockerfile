@@ -16,6 +16,7 @@ ADD atp-system /etc/nginx/sites-available/
 RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 RUN ln -s /etc/nginx/sites-available/main /etc/nginx/sites-enabled/main
 RUN ln -s /etc/nginx/sites-available/evklid-trainer /etc/nginx/sites-enabled/evklid-trainer
+RUN ln -s /etc/nginx/sites-available/evklid-trainer /etc/nginx/sites-enabled/atp-system
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 

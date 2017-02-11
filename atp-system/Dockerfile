@@ -12,4 +12,4 @@ EXPOSE 5000
 
 CMD ["node","server.js"]
 
-ENTRYPOINT cd /usr/discrete-eltech && node index
+ENTRYPOINT cd /usr/atp-system && node index
