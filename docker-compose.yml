@@ -15,7 +15,8 @@ services:
     restart: always
     volumes:
           - /srv/docker/online-modules/evklid-trainer:/usr/discrete-eltech
-          #- /srv/docker/docker-secret/evklid-trainer/access.js:/usr/discrete-eltech/access.js:ro
+     ports:
+          - 8888:8888
 
   atp-system:
       build: ./atp-system/
@@ -23,6 +24,8 @@ services:
       restart: always
       volumes:
           - /srv/docker/online-modules/atp-system:/usr/atp-system
+       ports:
+            - 8887:8887
 
   nginx-proxy:
     build: ./nginx/
