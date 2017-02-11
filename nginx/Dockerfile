@@ -11,6 +11,7 @@ RUN rm /etc/nginx/sites-enabled/default
 ADD default /etc/nginx/sites-available/
 ADD main /etc/nginx/sites-available/
 ADD evklid-trainer /etc/nginx/sites-available/
+ADD atp-system /etc/nginx/sites-available/
 
 RUN ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 RUN ln -s /etc/nginx/sites-available/main /etc/nginx/sites-enabled/main
