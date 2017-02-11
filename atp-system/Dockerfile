@@ -8,8 +8,6 @@ RUN mkdir -p /usr/atp-system
 
 WORKDIR /usr/atp-system
 
-EXPOSE 8887
-
 CMD ["node","index.js"]
 
 ENTRYPOINT cd /usr/atp-system && node index

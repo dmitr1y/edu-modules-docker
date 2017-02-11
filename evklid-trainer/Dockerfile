@@ -11,8 +11,6 @@ RUN mkdir -p /usr/discrete-eltech
 
 WORKDIR /usr/discrete-eltech
 
-EXPOSE 8888
-
 CMD ["node","index.js"]
 
 ENTRYPOINT cd /usr/discrete-eltech && node index
