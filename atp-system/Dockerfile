@@ -8,7 +8,7 @@ RUN git clone https://github.com/dmitr1y/atp-system.git /usr/atp-system
 
 WORKDIR /usr/atp-system
 
-EXPOSE 8888
+EXPOSE 5000
 
 CMD ["node","server.js"]
 
