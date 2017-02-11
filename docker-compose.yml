@@ -3,18 +3,24 @@ version: "2"
 services:
   eltech:
     build: ./eltech/
-    container_name: main
+    container_name: shell
     restart: always
+    volumes:
+          - /srv/docker/offline-modules:/www/modules:ro
 
   evklid-trainer:
     build: ./evklid-trainer/
     container_name: evklid
     restart: always
+    volumes:
+              - /srv/docker/online-modules/evklid-trainer:/usr/discrete-eltech:ro
 
   atp-system:
       build: ./atp-system/
       container_name: atp-system
       restart: always
+      volumes:
+                    - /srv/docker/online-modules/atp-system:/usr/atp-system:ro
 
   nginx-proxy:
     build: ./nginx/
