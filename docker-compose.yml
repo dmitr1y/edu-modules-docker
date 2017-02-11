@@ -11,6 +11,11 @@ services:
     container_name: evklid
     restart: always
 
+  atp-system:
+      build: ./atp-system/
+      container_name: atp-system
+      restart: always
+
   nginx-proxy:
     build: ./nginx/
     container_name: nginx
