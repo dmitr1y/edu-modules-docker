@@ -10,6 +10,6 @@ WORKDIR /usr/atp-system
 
 EXPOSE 5000
 
-CMD ["node","server.js"]
+CMD ["node","index.js"]
 
 ENTRYPOINT cd /usr/atp-system && node index

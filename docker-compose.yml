@@ -15,7 +15,7 @@ services:
     restart: always
     volumes:
           - /srv/docker/online-modules/evklid-trainer:/usr/discrete-eltech
-          - /srv/docker/docker-secret/evklid-trainer/access.js:/usr/discrete-eltech/access.js:ro
+          #- /srv/docker/docker-secret/evklid-trainer/access.js:/usr/discrete-eltech/access.js:ro
 
   atp-system:
       build: ./atp-system/
