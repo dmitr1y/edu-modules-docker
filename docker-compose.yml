@@ -6,6 +6,7 @@ services:
     container_name: shell
     restart: always
     volumes:
+          - /srv/docker/edu-modules:/www:ro
           - /srv/docker/offline-modules:/www/modules:ro
 
   evklid-trainer:
