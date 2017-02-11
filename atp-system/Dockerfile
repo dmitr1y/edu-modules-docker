@@ -8,7 +8,7 @@ RUN mkdir -p /usr/atp-system
 
 WORKDIR /usr/atp-system
 
-EXPOSE 5000
+EXPOSE 8887
 
 CMD ["node","index.js"]
 
