@@ -1,31 +1,19 @@
 version: "2"
 
 services:
-  eltech:
-    build: ./eltech/
-    container_name: shell
-    restart: always
-    volumes:
-          - /srv/docker/edu-modules:/www
-          - /srv/docker/offline-modules:/www/modules
-
   evklid-trainer:
     build: ./evklid-trainer/
-    container_name: evklid
+    container_name: evklid-trainer
     restart: always
     volumes:
-          - /srv/docker/online-modules/evklid-trainer:/usr/discrete-eltech
-#    ports:
-#          - 80:8888
+      - /srv/docker/online-modules/evklid-trainer:/usr/discrete-eltech
 
   atp-system:
-      build: ./atp-system/
-      container_name: atp-system
-      restart: always
-      volumes:
-          - /srv/docker/online-modules/atp-system:/usr/atp-system
-#      ports:
-#          - 80:8887
+    build: ./atp-system/
+    container_name: atp-system
+    restart: always
+    volumes:
+      - /srv/docker/online-modules/atp-system:/usr/atp-system
 
   nginx-proxy:
     build: ./nginx/
@@ -34,24 +22,18 @@ services:
       - 80:80
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-#    volumes_from:
-#      - eltech
-#      - atp-system
-#      - disrete-eltech
+      - /srv/docker/edu-modules:/www
+      - /srv/docker/offline-modules:/www/modules
     restart: always
-    links:
-      - evklid-trainer:evklid
-      - atp-system:atp-system
-      - eltech:eltech
 
   mongodb:
-   image: mongo
-   container_name: mongodb
-   ports:
-    - 27017:27017
-   volumes:
-   - /srv/mongo/evklid-trainer:/data/db
-   restart: always
+    image: mongo
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - /srv/mongo/evklid-trainer:/data/db
+    restart: always
 
 networks:
   default:

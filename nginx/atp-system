@@ -1,10 +1,9 @@
 ## NodeJS service evklid-trainer
 ## container name: evklid-trainer
 server {
-        server_name atp-system.students.ipo.spb.ru;
-        listen 80 ;
-        access_log /var/log/nginx/access.log;
-        location / {
-                proxy_pass http://atp-system/;
-        }
+    server_name atp-system.students.ipo.spb.ru;
+    access_log /var/log/nginx/access.log;
+    location / {
+        proxy_pass http://atp-system/;
+    }
 }
