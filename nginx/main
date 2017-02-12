@@ -3,6 +3,7 @@
 server {
         server_name students.ipo.spb.ru;
         index index.html index.htm;
+        root /www;
         access_log /var/log/nginx/access.log;
         location /www/ {
                 proxy_pass http://shell/;
