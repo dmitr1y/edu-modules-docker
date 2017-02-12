@@ -9,6 +9,7 @@ RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
 
 RUN mkdir /www
+RUN mkdir /www/modules
 
 ADD default /etc/nginx/sites-available/
 ADD main /etc/nginx/sites-available/
