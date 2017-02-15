@@ -9,6 +9,10 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash
 RUN apt-get install -y nodejs build-essential libavahi-compat-libdnssd-dev
 COPY boolean-solver /usr/boolean-solver
 WORKDIR /usr/boolean-solver
+
+# Fix for "EXDEV: cross-device link not permitted", see https://github.com/npm/npm/issues/9863
+RUN cd $(npm root -g)/npm && npm install fs-extra && sed -i -e s/graceful-fs/fs-extra/ -e s/fs\.rename/fs.move/ ./lib/utils/rename.js
+
 RUN rm -rf /usr/boolean-solver/node_modules/libxmls
 RUN cd /usr/boolean-solver && npm install libxmljs
 
