@@ -19,7 +19,7 @@ services:
     container_name: boolean-solver
     restart: always
     volumes:
-      - /srv/docker/online-modules/boolean-solver:/usr/boolean-solver
+      - /srv/docker/online-modules/boolean-solver:/usr/boolean-solver-tmp
 
   nginx-proxy:
     build: ./nginx/
