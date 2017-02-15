@@ -1,0 +1,9 @@
+## NodeJS service evklid-trainer
+## container name: evklid-trainer
+server {
+    server_name boolean-solver.students.ipo.spb.ru;
+    access_log /var/log/nginx/access.log;
+    location / {
+        proxy_pass http://boolean-solver:3000/;
+    }
+}

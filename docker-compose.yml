@@ -18,9 +18,8 @@ services:
     build: ./boolean-solver/
     container_name: boolean-solver
     restart: always
-    #TODO change path
     volumes:
-      - srv/docker/online-modules/mlita-eltech-master:/usr/boolean-solver
+      - /srv/docker/online-modules/boolean-solver:/usr/boolean-solver
 
   nginx-proxy:
     build: ./nginx/
