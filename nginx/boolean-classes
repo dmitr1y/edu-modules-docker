@@ -1,0 +1,9 @@
+## PHP service boolean-classes
+## container name: boolean-classes
+server {
+    server_name classes.students.ipo.spb.ru;
+    access_log /var/log/nginx/access.log;
+    location / {
+        proxy_pass http://boolean-classes/;
+    }
+}

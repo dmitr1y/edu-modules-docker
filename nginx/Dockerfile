@@ -22,6 +22,7 @@ RUN ln -s /etc/nginx/sites-available/main /etc/nginx/sites-enabled/main
 RUN ln -s /etc/nginx/sites-available/evklid-trainer /etc/nginx/sites-enabled/evklid-trainer
 RUN ln -s /etc/nginx/sites-available/atp-system /etc/nginx/sites-enabled/atp-system
 RUN ln -s /etc/nginx/sites-available/boolean-solver /etc/nginx/sites-enabled/boolean-solver
+RUN ln -s /etc/nginx/sites-available/boolean-classes /etc/nginx/sites-enabled/boolean-classes
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 

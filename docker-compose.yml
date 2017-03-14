@@ -20,6 +20,12 @@ services:
     restart: always
 #    volumes:
 #      - /srv/docker/online-modules/boolean-solver:/usr/boolean-solver
+   boolean-clases:
+      build: ./boolean-clases/
+      container_name: boolean-clases
+      restart: always
+      volumes:
+        - /srv/docker/online-modules/boolean-clases:/usr/boolean-clases
 
   nginx-proxy:
     build: ./nginx/
