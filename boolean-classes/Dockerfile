@@ -9,8 +9,8 @@ RUN mkdir -p /usr/boolean-classes
 #RUN rm /usr/discrete-eltech/access.js
 #ADD access.js /usr/discrete-eltech/
 
-WORKDIR /usr/boolean-classes
+#WORKDIR /usr/boolean-classes
 
-CMD ["service ","apache2", "start"]
+#CMD ["service ","apache2", "start"]
 
-ENTRYPOINT cd /usr/boolean-classes && service apache2 restart
+#ENTRYPOINT cd /usr/boolean-classes && service apache2 restart
