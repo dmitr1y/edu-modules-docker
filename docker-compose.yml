@@ -23,7 +23,7 @@ services:
 #      - /srv/docker/online-modules/boolean-solver:/usr/boolean-solver
 
   boolean-clases:
-    build: ./boolean-clases/
+    build: ./boolean-classes/
     container_name: boolean-clases
     restart: always
     volumes:
