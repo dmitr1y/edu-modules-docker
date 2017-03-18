@@ -14,18 +14,20 @@ services:
     restart: always
     volumes:
       - /srv/docker/online-modules/atp-system:/usr/atp-system
+
   boolean-solver:
     build: ./boolean-solver/
     container_name: boolean-solver
     restart: always
 #    volumes:
 #      - /srv/docker/online-modules/boolean-solver:/usr/boolean-solver
-   boolean-clases:
-      build: ./boolean-clases/
-      container_name: boolean-clases
-      restart: always
-      volumes:
-        - /srv/docker/online-modules/boolean-clases:/usr/boolean-clases
+
+  boolean-clases:
+    build: ./boolean-classes/
+    container_name: boolean-clases
+    restart: always
+    volumes:
+      - /srv/docker/online-modules/boolean-clases:/usr/boolean-clases
 
   nginx-proxy:
     build: ./nginx/
