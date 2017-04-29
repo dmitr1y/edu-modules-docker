@@ -7,7 +7,8 @@ RUN export HOME=/tmp
 RUN apt-get update && apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash
 RUN apt-get install -y nodejs build-essential libavahi-compat-libdnssd-dev
-COPY boolean-solver /usr/boolean-solver
+#COPY boolean-solver /usr/boolean-solver
+RUN mkdir /usr/boolean-solver
 WORKDIR /usr/boolean-solver
 
 # Fix for "EXDEV: cross-device link not permitted", see https://github.com/npm/npm/issues/9863
