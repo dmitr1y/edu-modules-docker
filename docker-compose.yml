@@ -27,7 +27,7 @@ services:
     container_name: boolean-classes
     restart: always
     volumes:
-      - /srv/docker/online-modules/boolean-clases:/var/www/boolean-classes
+      - /srv/docker/online-modules/boolean-classes:/var/www/boolean-classes
 
   nginx-proxy:
     build: ./nginx/
