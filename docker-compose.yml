@@ -37,7 +37,7 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - /srv/docker/edu-modules:/www
-      - /srv/docker/offline-modules:/www/modules
+      - /srv/offline-modules:/www/modules
     restart: always
 
   mongodb:
