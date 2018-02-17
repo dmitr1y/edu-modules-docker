@@ -49,6 +49,8 @@ services:
       - /srv/mongo/evklid-trainer:/data/db
     restart: always
 
+#  mysql:
+#    image:
 networks:
   default:
     external:

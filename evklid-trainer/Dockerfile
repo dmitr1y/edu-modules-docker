@@ -3,7 +3,7 @@ FROM node
 ENV DEBIAN_FRONTEND noninteractive
 #RUN apt-get update && apt-get install -y nodejs build-essential nodejs-legacy
 RUN apt-get update && apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs build-essential
 
 
