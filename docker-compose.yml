@@ -22,7 +22,7 @@ services:
     container_name: edu-shell
     restart: always
     volumes:
-      - /home/dmitriy/Projects/PhpstormProjects/edu-shell:/srv/www/edu
+      - /srv/edu-shell/:/srv/www/edu
     restart: always
 
 #  boolean-solver:
@@ -53,8 +53,8 @@ services:
   mongodb:
     build: ./mongo/
     container_name: mongo_db
-    ports:
-      - "27017:27017"
+    expose:
+      - "27017"
     volumes:
       - /srv/mongo/evklid-trainer:/data/db
     restart: always
@@ -62,8 +62,8 @@ services:
   mysql:
     build: ./mysql/
     container_name: mysql_db
-    ports:
-      - "3306:3306"
+    expose:
+      - "3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: edu-shell
