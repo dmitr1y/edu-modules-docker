@@ -7,6 +7,7 @@ services:
     restart: always
     volumes:
       - /srv/edu/online-modules/evklid-trainer:/usr/discrete-eltech
+    restart: always
 
   atp-system:
     build: ./atp-system/
@@ -14,6 +15,7 @@ services:
     restart: always
     volumes:
       - /srv/edu/online-modules/atp-system:/usr/atp-system
+    restart: always
 
   apache-php:
     build: ./apache-php/
@@ -21,6 +23,7 @@ services:
     restart: always
     volumes:
       - /home/dmitriy/Projects/PhpstormProjects/edu-shell:/srv/www/edu
+    restart: always
 
 #  boolean-solver:
 #    build: ./boolean-solver/
@@ -63,6 +66,12 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: edu-shell
+      MYSQL_USER: edu
+      MYSQL_PASSWORD: edu
+    volumes:
+      - /srv/mysql:/var/lib/mysql
+    restart: always
 
 networks:
   default:

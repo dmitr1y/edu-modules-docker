@@ -1,9 +1,9 @@
 ## NodeJS service evklid-trainer
 ## container name: evklid-trainer
 server {
-        server_name evklid.edu.konstantinov.com;
+        server_name evklid.edu.konstantinov.com.ru;
         access_log /var/log/nginx/access.log;
         location / {
-                proxy_pass http://evklid-trainer:8888/;
+                proxy_pass http://evklid-trainer/;
         }
 }

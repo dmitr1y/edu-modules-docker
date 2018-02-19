@@ -1,7 +1,7 @@
 ## PHP service boolean-classes
 ## container name: boolean-classes
 server {
-    server_name edu.konstantinov.com;
+    server_name edu.konstantinov.com.ru;
     access_log /var/log/nginx/access.log;
     location / {
         proxy_pass http://edu-shell/;
@@ -9,7 +9,7 @@ server {
 }
 
 server {
-    server_name admin.edu.konstantinov.com;
+    server_name admin.edu.konstantinov.com.ru;
     access_log /var/log/nginx/access.log;
     location / {
         proxy_pass http://edu-shell/backend/;
