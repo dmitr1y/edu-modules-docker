@@ -1,0 +1,17 @@
+## PHP service boolean-classes
+## container name: boolean-classes
+server {
+    server_name edu.konstantinov.com;
+    access_log /var/log/nginx/access.log;
+    location / {
+        proxy_pass http://edu-shell/;
+    }
+}
+
+server {
+    server_name admin.edu.konstantinov.com;
+    access_log /var/log/nginx/access.log;
+    location / {
+        proxy_pass http://edu-shell/backend/;
+    }
+}
