@@ -1,9 +1,9 @@
 ## main site
 ## container name: main
-## TODO change host to edu.konstantinov.com.ru
 server {
-        server_name edu.konstantinov.com.ru;
-        index index.html index.htm;
-        root /www;
+		listen 80;
+        server_name konstantinov.com.ru;
+        root /www/main;
+        index index.html index.htm;      
         access_log /var/log/nginx/access.log;
 }

@@ -12,9 +12,10 @@ RUN mkdir /www
 RUN mkdir /www/modules
 
 ADD default /etc/nginx/sites-enabled/
-ADD shell /etc/nginx/sites-enabled/
-ADD evklid-trainer /etc/nginx/sites-enabled/
-ADD atp-system /etc/nginx/sites-enabled/
+ADD main /etc/nginx/sites-enabled/
+#ADD shell /etc/nginx/sites-enabled/
+#ADD evklid-trainer /etc/nginx/sites-enabled/
+#ADD atp-system /etc/nginx/sites-enabled/
 #ADD boolean-solver /etc/nginx/sites-available/
 
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
