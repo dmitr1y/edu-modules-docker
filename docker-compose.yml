@@ -11,7 +11,7 @@ services:
       - frontend
 
   nginx:
-    build: ./nginx/
+    image: nginx
     container_name: nginx
     ports:
       - '80:80'
@@ -28,6 +28,9 @@ services:
       - './nginx/main:/etc/nginx/conf.d/main.conf'
       - './nginx/evklid-trainer:/etc/nginx/conf.d/evklid.conf'
       - './nginx/shell:/etc/nginx/conf.d/shell.conf'
+      # certs:
+      - '/etc/ssl/konstantinov.com.ru.crt:/etc/ssl/konstantinov.com.ru.crt'
+      - '/etc/ssl/konstantinov.com.ru.key:/etc/ssl/konstantinov.com.ru.key'
     restart: always
     networks:
       - backend
