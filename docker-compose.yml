@@ -21,7 +21,8 @@ services:
     volumes:
       - '/srv/edu/edu-modules:/www/edu'
       - '/srv/edu/offline-modules:/www/edu/modules'
-      - '/srv/www:/www'
+      - '/srv/www/main:/www/main'
+      - '/srv/www/flyboard:/www/flyboard'
       # confs:
       - './nginx/default:/etc/nginx/conf.d/default.conf'
       - './nginx/main:/etc/nginx/conf.d/main.conf'
