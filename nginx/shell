@@ -1,9 +1,13 @@
 server {
-    listen 80;
+    listen 443;
     server_name edu.konstantinov.com.ru;
 
     set $base_root /;
     root $base_root;
+
+    ssl    on;
+    ssl_certificate    /etc/ssl/konstantinov.com.ru.crt;
+    ssl_certificate_key    /etc/ssl/konstantinov.com.ru.key;
 
     #error_log /var/log/nginx/advanced.local.error.log warn;
     #access_log /var/log/nginx/advanced.local.access.log main;

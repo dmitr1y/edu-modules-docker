@@ -21,8 +21,9 @@ services:
     volumes:
       - '/srv/edu/edu-modules:/www/edu'
       - '/srv/edu/offline-modules:/www/edu/modules'
-      - '/srv/www/main:/www/main'
+      - '/srv/www:/www'
       # confs:
+      - './nginx/default:/etc/nginx/conf.d/default.conf'
       - './nginx/main:/etc/nginx/conf.d/main.conf'
       - './nginx/evklid-trainer:/etc/nginx/conf.d/evklid.conf'
       - './nginx/shell:/etc/nginx/conf.d/shell.conf'

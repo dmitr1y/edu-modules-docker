@@ -2,8 +2,8 @@
 ## container name: main
 server {
 		listen 443;
-        server_name konstantinov.com.ru;
-        root /www/main;
+        server_name flyboard.konstantinov.com.ru;
+        root /www/flyboard;
         ssl    on;
         ssl_certificate    /etc/ssl/konstantinov.com.ru.crt;
         ssl_certificate_key    /etc/ssl/konstantinov.com.ru.key;
