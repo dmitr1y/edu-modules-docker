@@ -42,19 +42,19 @@ services:
       - backend
     restart: always
 
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    links:
-      - 'mysql:db'
-    ports:
-      - '8082:80'
-    environment:
-      - PMA_USER=root
-      - PMA_PASSWORD=password
-      - PHP_UPLOAD_MAX_FILESIZE=100MB
-    networks:
-      - backend
-      - frontend
+#  phpmyadmin:
+#    image: phpmyadmin/phpmyadmin
+#    links:
+#      - 'mysql:db'
+#    ports:
+#      - '8082:80'
+#    environment:
+#      - PMA_USER=root
+#      - PMA_PASSWORD=password
+#      - PHP_UPLOAD_MAX_FILESIZE=100MB
+#    networks:
+#      - backend
+#      - frontend
 
   mysql:
     image: mysql
